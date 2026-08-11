@@ -267,3 +267,23 @@ footer {
   border: 1px solid var(--rule-gray);
   border-radius: 6px;
 }
+.pdf-fallback-note { display: none; }
+
+/* Most phones/tablets can't render an embedded PDF inline (it shows blank),
+   so below 700px we hide the embed and point people to the buttons instead,
+   which open the PDF properly in the device's own viewer. */
+@media (max-width: 700px) {
+  .pdf-embed { display: none; }
+  .pdf-fallback-note {
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: var(--gray-text);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ---------- Small-screen nav tidy-up ---------- */
+@media (max-width: 480px) {
+  nav.site-nav a { margin-left: 0.85rem; font-size: 0.88rem; }
+}

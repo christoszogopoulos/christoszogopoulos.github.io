@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Christos I. Zogopoulos</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="index.html">Christos I. Zogopoulos</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html" class="active">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Curriculum Vitae</h1>
+  <p>
+    <a class="btn" href="assets/Christos_Zogopoulos_CV.pdf" download>Download PDF</a>
+    &nbsp;
+    <a class="btn secondary" href="assets/Christos_Zogopoulos_CV.pdf" target="_blank" rel="noopener">Open in new tab</a>
+  </p>
+
+  <!--
+    To update the CV: replace the file at assets/Christos_Zogopoulos_CV.pdf
+    with your new PDF, keeping the same filename. No other edits needed.
+  -->
+
+  <object class="pdf-embed" data="assets/Christos_Zogopoulos_CV.pdf" type="application/pdf">
+    <p>Your browser can't display the PDF inline.
+      <a href="assets/Christos_Zogopoulos_CV.pdf">Download it here</a> instead.</p>
+  </object>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Christos I. Zogopoulos &middot; Athens University of Economics and Business
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>

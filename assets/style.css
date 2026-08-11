@@ -244,12 +244,10 @@ p.lede {
   word-break: break-word;
 }
 .contact-address {
-  margin-top: 1.8rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #333;
-  line-height: 1.7;
+  display: block;
+  margin-top: 1rem;
 }
-.contact-address .contact-card-label { display: block; margin-bottom: 0.3rem; }
+.contact-address .contact-card-value { line-height: 1.7; color: #333; }
 
 /* ---------- Footer ---------- */
 footer {

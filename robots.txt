@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://christoszogopoulos.github.io/sitemap.xml

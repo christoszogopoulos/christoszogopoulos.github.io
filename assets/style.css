@@ -1,0 +1,184 @@
+/* ===========================================================
+   Christos Zogopoulos — Academic site stylesheet
+   Edit colors/fonts here; every page shares this one file.
+   =========================================================== */
+
+:root {
+  --navy: #17365d;
+  --navy-dark: #0f2540;
+  --gray-text: #555555;
+  --rule-gray: #c9d2dc;
+  --bg: #ffffff;
+  --bg-soft: #f7f9fb;
+  --max-width: 860px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Iowan Old Style", "Palatino Linotype", serif;
+  color: #222;
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a { color: var(--navy); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Header / nav ---------- */
+header.site-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 1.1rem 1.5rem;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+.site-title:hover { text-decoration: none; opacity: 0.9; }
+
+nav.site-nav a {
+  color: #e7edf5;
+  margin-left: 1.25rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+nav.site-nav a:first-child { margin-left: 0; }
+nav.site-nav a:hover { color: #fff; text-decoration: underline; }
+nav.site-nav a.active { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 3px; }
+
+/* ---------- Main content ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--navy);
+  font-size: 1.9rem;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--navy);
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--rule-gray);
+  padding-bottom: 0.4rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+  color: #1a1a1a;
+}
+
+p.lede {
+  font-size: 1.05rem;
+  color: var(--gray-text);
+  margin-top: 0;
+}
+
+.tag {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--gray-text);
+  font-size: 0.95rem;
+  margin-bottom: 1.8rem;
+}
+
+/* ---------- Entry blocks (education, teaching, papers) ---------- */
+.entry {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 0.25rem 1.25rem;
+  margin-bottom: 1.3rem;
+}
+.entry .years {
+  color: var(--gray-text);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  padding-top: 0.15rem;
+}
+.entry .details h3 { margin-bottom: 0.15rem; }
+.entry .details .place { color: #333; margin-bottom: 0.15rem; }
+.entry .details .note { color: var(--gray-text); font-size: 0.92rem; }
+
+@media (max-width: 560px) {
+  .entry { grid-template-columns: 1fr; }
+  .entry .years { padding-top: 0; font-weight: bold; }
+}
+
+/* ---------- Paper card ---------- */
+.paper {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule-gray);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.paper h3 { margin-top: 0; }
+.paper .coauthors { color: var(--gray-text); font-style: italic; margin-bottom: 0.6rem; }
+.paper .venues { color: var(--gray-text); font-size: 0.9rem; margin-top: 0.8rem; }
+
+/* ---------- Buttons / links ---------- */
+.btn {
+  display: inline-block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.92rem;
+  background: var(--navy);
+  color: #fff !important;
+  padding: 0.55rem 1.1rem;
+  border-radius: 5px;
+  text-decoration: none !important;
+}
+.btn:hover { background: var(--navy-dark); }
+.btn.secondary {
+  background: transparent;
+  color: var(--navy) !important;
+  border: 1px solid var(--navy);
+}
+.btn.secondary:hover { background: var(--bg-soft); }
+
+/* ---------- Contact list ---------- */
+.contact-list { list-style: none; padding: 0; }
+.contact-list li { margin-bottom: 0.7rem; font-family: "Helvetica Neue", Arial, sans-serif; }
+.contact-list li span.label { color: var(--gray-text); display: inline-block; min-width: 6rem; }
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  color: var(--gray-text);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ---------- CV embed ---------- */
+.pdf-embed {
+  width: 100%;
+  height: 85vh;
+  border: 1px solid var(--rule-gray);
+  border-radius: 6px;
+}

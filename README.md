@@ -1,5 +1,7 @@
 # Christos Zogopoulos — Academic Website
 
+**Live site:** [christoszogopoulos.github.io](https://christoszogopoulos.github.io) — this repository is the source code; visit the link above for the actual website.
+
 Plain HTML/CSS site, no build tools required. Free to host on GitHub Pages.
 
 ## Files
